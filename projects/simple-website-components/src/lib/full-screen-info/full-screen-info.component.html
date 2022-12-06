@@ -1,0 +1,7 @@
+<div class="fullScreenInfo" *ngFor="let page of pageInfo.pages">
+    <div class="fullScreenInfo" [ngStyle]="getBgColor(page.bgColor)"> 
+        <div class="fullScreenInfo_text" >
+            {{page.pageTitle}}
+        </div>
+    </div>
+</div>

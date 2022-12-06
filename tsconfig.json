@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "simple-website-components": [
+        "dist/simple-website-components"
+      ],
+      "simple-website-components/*": [
+        "dist/simple-website-components/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
