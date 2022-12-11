@@ -11,11 +11,23 @@ phases:
       - if [ -z "${BRANCH}" ]; then echo "BRANCH not set" && exit 1 ; fi
       - if [ -z "${ENVIRONMENT}" ]; then echo "ENVIRONMENT not set" && exit 1 ; fi
       - npm install && npm install -g @angular/cli
-  build:
+  build-lib:
     commands:
+      - echo build Library process started now
+      - git checkout $BRANCH
+      - ng build --project=simple-website-components --configuration=$ENVIRONMENT
+      - cd dist/simple-website-components
+      - npm pack
+      - cd..
+      - cd.. 
+  build-proj:
+    commands:
+      - pwd
+      - ls -la
       - echo build process started now
       - git checkout $BRANCH
-      - ng build --configuration=$ENVIRONMENT
+      - npm install dist/simple-website-components.tgz
+      - ng build
   post_build:
     commands:
       - echo build process finished, we should uplload to S3 now
