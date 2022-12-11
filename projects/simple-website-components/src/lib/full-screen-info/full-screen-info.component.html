@@ -1,7 +1,14 @@
 <div class="fullScreenInfo" *ngFor="let page of pageInfo.pages">
-    <div class="fullScreenInfo" [ngStyle]="getBgColor(page.bgColor)"> 
+    <div id={{page.pageId}} class="fullScreenInfo" 
+    [ngStyle]="getBgColor(page.bgColor)" > 
         <div class="fullScreenInfo_text" >
             {{page.pageTitle}}
+            <input (keyup.arrowdown)="scrollToNextPage(page)"
+            (keyup.arrowup)="scrollToPreviousPage(page)"> 
+            <div pageNavigationButtons>
+                <button (click)="scrollToPreviousPage(page)" > Up </button>
+                <button (click)="scrollToNextPage(page) "  > Down </button>
+            </div>
         </div>
     </div>
 </div>
