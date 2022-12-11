@@ -8,7 +8,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { ThirtyfiveComponent } from './thirtyfive/thirtyfive.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { HomeComponent } from './home/home.component';
-import { SimpleWebsiteComponentsModule } from 'simple-website-components'
+// import { SimpleWebsiteComponentsModule } from 'simple-website-components'
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { SimpleWebsiteComponentsModule } from 'simple-website-components'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SimpleWebsiteComponentsModule
+    // SimpleWebsiteComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
