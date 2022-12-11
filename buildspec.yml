@@ -11,7 +11,7 @@ phases:
       - if [ -z "${BRANCH}" ]; then echo "BRANCH not set" && exit 1 ; fi
       - if [ -z "${ENVIRONMENT}" ]; then echo "ENVIRONMENT not set" && exit 1 ; fi
       - npm install && npm install -g @angular/cli
-  build-lib:
+  build:
     commands:
       - echo build Library process started now
       - git checkout $BRANCH
@@ -20,12 +20,9 @@ phases:
       - npm pack
       - cd..
       - cd.. 
-  build-proj:
-    commands:
       - pwd
       - ls -la
-      - echo build process started now
-      - git checkout $BRANCH
+      - echo build Main Project process started now
       - npm install dist/simple-website-components.tgz
       - ng build
   post_build:
