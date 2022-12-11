@@ -5,7 +5,7 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 14.x
+      nodejs: 14.20.1
     commands:
       - echo install process started
       - if [ -z "${BRANCH}" ]; then echo "BRANCH not set" && exit 1 ; fi
@@ -21,4 +21,4 @@ phases:
       - echo build process finished, we should uplload to S3 now
       - cd dist/$APP_NAME
       - ls -la
-      - aws s3 sync . s3://manjindersingh.me/$ENVIRONMENT --delete
+      - aws s3 sync . s3://manjindersingh.me --delete
