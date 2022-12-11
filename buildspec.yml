@@ -23,7 +23,7 @@ phases:
       - pwd
       - ls -la
       - echo build Main Project process started now
-      - npm install dist/simple-website-components.tgz
+      - npm install dist/simple-website-components/simple-website-components.tgz
       - npm install 
       - ng build
   post_build:
