@@ -15,7 +15,7 @@ phases:
     commands:
       - echo build Library process started now
       - git checkout $BRANCH
-      - ng build --project=simple-website-components --configuration=$ENVIRONMENT
+      - ng build --project=simple-website-components
       - cd dist/simple-website-components
       - npm pack
       - cd..
