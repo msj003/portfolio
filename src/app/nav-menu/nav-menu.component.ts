@@ -12,4 +12,6 @@ export class NavMenuComponent implements OnInit {
   ngOnInit() {
   }
 
+  collapse(){}
+
 }
