@@ -18,8 +18,8 @@ phases:
       - ng build --project=simple-website-components
       - cd dist/simple-website-components
       - npm pack
-      - cd..
-      - cd.. 
+      - cd ..
+      - cd .. 
       - pwd
       - ls -la
       - echo build Main Project process started now
