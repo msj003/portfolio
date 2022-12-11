@@ -16,14 +16,7 @@ phases:
       - echo build Library process started now
       - git checkout $BRANCH
       - ng build --project=simple-website-components
-      - cd dist/simple-website-components
-      - npm pack
-      - cd ..
-      - cd .. 
-      - pwd
-      - ls -la
       - echo build Main Project process started now
-      - npm install dist/simple-website-components/simple-website-components-0.0.1.tgz --force
       - npm install 
       - ng build
   post_build:
