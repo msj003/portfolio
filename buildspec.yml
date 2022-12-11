@@ -17,7 +17,7 @@ phases:
       - git checkout $BRANCH
       - ng build --project=simple-website-components
       - echo build Main Project process started now
-      - npm install 
+      # - npm install 
       - ng build
   post_build:
     commands:
