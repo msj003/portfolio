@@ -10,7 +10,7 @@ phases:
       - echo install process started
       - if [ -z "${BRANCH}" ]; then echo "BRANCH not set" && exit 1 ; fi
       - if [ -z "${ENVIRONMENT}" ]; then echo "ENVIRONMENT not set" && exit 1 ; fi
-      - npm install -g @angular/cli
+      - npm install && npm install -g @angular/cli
   build:
     commands:
       - echo build Library process started now
