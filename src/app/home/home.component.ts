@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as internal from 'assert';
-import { PageInfoModel } from 'simple-website-components/lib/models/PageInfoModel';
 
 @Component({
   selector: 'app-home',
