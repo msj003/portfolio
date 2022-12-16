@@ -1,14 +1,33 @@
-<div class="fullScreenInfo" *ngFor="let page of pageInfo.pages">
-    <div id={{page.pageId}} class="fullScreenInfo" 
+<div class="fullScreenInfo" *ngFor="let page of pageInfo.pages" >
+    <div *ngIf="page.pageType===pageTypes.TextArticlePage"   class="fullScreenInfo"  [ngStyle]="getBgColor(page.bgColor)" >
+        <div *ngIf="page.previousPage" class="arrowUp"  (click)="scrollToPreviousPage(page)"></div>
+        <lib-text-article-page id={{page.pageId}} 
+        [page] = "page">
+        </lib-text-article-page>
+        <div *ngIf="page.nextPage" class="arrowDown"  (click)="scrollToNextPage(page)"></div>
+    </div>
+
+    <div *ngIf="page.pageType===pageTypes.ImageSildeShowPage" class="fullScreenInfo"  [ngStyle]="getBgColor(page.bgColor)" >
+        <div *ngIf="page.previousPage" class="arrowUp"  (click)="scrollToPreviousPage(page)"></div>
+        <lib-image-slide-show-page id={{page.pageId}}  >
+        </lib-image-slide-show-page>
+        <div *ngIf="page.nextPage" class="arrowDown"  (click)="scrollToNextPage(page)"></div>
+    </div>
+
+    <!-- <div id={{page.pageId}} class="fullScreenInfo" 
     [ngStyle]="getBgColor(page.bgColor)" > 
         <div class="fullScreenInfo_text" >
-            {{page.pageTitle}}
-            <input (keyup.arrowdown)="scrollToNextPage(page)"
-            (keyup.arrowup)="scrollToPreviousPage(page)"> 
+            {{page.pageTitle}} 
             <div pageNavigationButtons>
                 <button (click)="scrollToPreviousPage(page)" > Up </button>
                 <button (click)="scrollToNextPage(page) "  > Down </button>
+                <div class="arrowDown"  (click)="scrollToNextPage(page)"></div>
             </div>
         </div>
-    </div>
+    </div> -->
+
+</div>
+
+<div scrollTopButton>
+    <button (click)="scrollToTop() "  > Top </button>
 </div>

@@ -14,26 +14,50 @@ export class HomeComponent implements OnInit {
     this.pageInfoModel = {
       'pages': [
         {
-          'pageTitle' : 'This is My first Page',
-          'bgColor': 'yellow'
+          'pageTitle' : 'Welcome',
+           'bgColor': 'black',
+           'pageType': 'TextArticlePage',
+           'articleText': 'This is Test Data for article 1'
+
         },
         {
-          'pageTitle' : 'This is My Second Page',
-          'bgColor': 'red'
+          'pageTitle' : 'More Information',
+           'bgColor': 'red',
+           'pageType': 'TextArticlePage',
+           'articleText': 'This is Test Data for article 2'
         },
         {
-          'pageTitle' : 'This is My Third Page',
-          'bgColor': 'blue'
+          'pageTitle' : 'Continue``',
+           'bgColor': 'blue',
+           'pageType': 'ImageSlideShowPage',
+           'slideshowData': [
+              {
+                'imageTitle' : 'image 1',
+                'imageLink' : 'www.googl.com/1'
+              },
+              {
+                'imageTitle' : 'image 2',
+                'imageLink' : 'www.googl.com/2'
+              },
+              {
+                'imageTitle' : 'image 3',
+                'imageLink' : 'www.googl.com/3'
+              }
+           ]
+        },
+        {
+          'pageTitle' : 'More Info ds324  rmation',
+           'bgColor': 'green',
+           'pageType': 'TextArticlePage',
+           'articleText': 'This is Test Data for article 3'
+        },
+        {
+          'pageTitle' : 'Continue 324324 ``',
+           'bgColor': 'blue',
+           'pageType': 'ImageSlideShowPage'
         }
       ]
     }
-  }
-
-  onScroll1($element): void {
-    
-    // console.log($element);
-    // $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-    document.getElementById("scroll1").scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
 }

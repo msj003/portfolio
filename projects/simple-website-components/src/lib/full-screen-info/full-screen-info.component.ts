@@ -1,6 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { Page, PageInfoModel } from '../models/PageInfoModel';
+import { Page, PageInfoModel, PageTypes } from '../models/PageInfoModel';
 
 @Component({
   selector: 'lib-full-screen-info',
@@ -9,15 +9,14 @@ import { Page, PageInfoModel } from '../models/PageInfoModel';
 })
 export class FullScreenInfoComponent implements OnInit {
 
-  @Input() pageInfo: PageInfoModel;
-
+  @Input() pageInfo: any;
+  pageTypes = PageTypes;
 
   constructor(
     private viewportScroller: ViewportScroller
   ) { }
 
   ngOnInit() {
-    console.log(this.pageInfo);
     if(this.pageInfo.pages){
       var idx = 0;
       this.pageInfo.pages.forEach((page) => {
@@ -42,7 +41,10 @@ export class FullScreenInfoComponent implements OnInit {
 
   scrollToPreviousPage(page:Page){
     console.log(page.previousPage.pageId);
-    //document.getElementById(page.previousPage.pageId).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    document.getElementById(page.previousPage.pageId).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
+
+  scrollToTop(){
     this.viewportScroller.scrollToPosition([0,0]);
   }
 
