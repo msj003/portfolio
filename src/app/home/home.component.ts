@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
       'pages': [
         {
           'pageTitle' : 'Welcome',
-           'bgColor': 'black',
+           'bgColor': 'grey',
            'pageType': 'TextArticlePage',
            'articleText': 'This is Test Data for article 1'
 

@@ -7,6 +7,9 @@
 }
 
 .arrowDown {
+    position: relative;
+    left: 50em;
+    top : 35em;
     box-sizing: border-box;
     height: 5vw;
     width: 5vw;
@@ -23,6 +26,9 @@
   }
 
   .arrowUp {
+    position: relative;
+    left: 50em;
+    top: 5em;  
     box-sizing: border-box;
     height: 5vw;
     width: 5vw;
@@ -36,4 +42,11 @@
   .arrowUp:hover {
     border-top-width: 4px;
     border-left-width: 4px;
+    
+  }
+
+  .toTop{
+    position: fixed;
+    right: 1%;
+    top: 90%;  
   }
