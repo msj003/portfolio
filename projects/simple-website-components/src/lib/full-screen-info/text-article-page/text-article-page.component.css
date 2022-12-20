@@ -1,0 +1,13 @@
+.articleHeading{
+    text-align: center;
+    font-family: arial, sans-serif;
+}
+
+.articleText{
+    position: relative;
+    top: 3em;
+    text-align: left;
+    font-size: 1.6em;
+    text-indent: 10em;
+    
+}

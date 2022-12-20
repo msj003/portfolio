@@ -1,15 +1,29 @@
-.fullScreenInfo{
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.fullScreenInfo_container{
     height: 100%;
 }
 
-.fullScreenInfo_text{
-    text-align: center;
+.fullScreenInfo{
+  height: 100%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
+.pages{
+    text-align: center;
+    font-family: arial, sans-serif;
+    height: 80%;
+}
+
+
 .arrowDown {
-    position: relative;
-    left: 50em;
-    top : 35em;
+    float: right;
     box-sizing: border-box;
     height: 5vw;
     width: 5vw;
@@ -26,9 +40,7 @@
   }
 
   .arrowUp {
-    position: relative;
-    left: 50em;
-    top: 5em;  
+    float: right;
     box-sizing: border-box;
     height: 5vw;
     width: 5vw;
@@ -50,3 +62,5 @@
     right: 1%;
     top: 90%;  
   }
+
+  

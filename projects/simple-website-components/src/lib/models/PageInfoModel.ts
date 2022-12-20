@@ -20,6 +20,7 @@ export enum PageTypes{
 export class ImageInfo{
     imageTitle: string;
     imgaeLink: string;
+    imageDesc: string;
 }
 
 export class ImageSildeShowPage implements Page{
@@ -29,7 +30,7 @@ export class ImageSildeShowPage implements Page{
     pageId?: string;
     nextPage?: Page;
     previousPage?: Page;
-    slideshowData: ImageInfo[];
+    imagesData: ImageInfo[];
 }
 
 export class TextArticlePage implements Page{
