@@ -1,0 +1,74 @@
+* {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .fullScreenInfo_container{
+      height: 100%;
+  }
+  
+  .fullScreenInfo{
+    height: 100vh;
+    padding-left: 15vh;
+    padding-right: 15vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+  
+  .fullScreenInfo::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+  }
+  
+  .pages{
+      text-align: center;
+      font-family: arial, sans-serif;
+      height: 80%;
+  }
+  
+  
+  .arrowDown {
+      float: right;
+      box-sizing: border-box;
+      height: 5vw;
+      width: 5vw;
+      border-style: solid;
+      border-color: white;
+      border-width: 0px 1px 1px 0px;
+      transform: rotate(45deg);
+      transition: border-width 150ms ease-in-out;
+    }
+    
+    .arrowDown:hover {
+      border-bottom-width: 4px;
+      border-right-width: 4px;
+    }
+  
+    .arrowUp {
+      float: right;
+      box-sizing: border-box;
+      height: 5vw;
+      width: 5vw;
+      border-style: solid;
+      border-color: white;
+      border-width: 1px 0px 0px 1px;
+      transform: rotate(45deg);
+      transition: border-width 150ms ease-in-out;
+    }
+    
+    .arrowUp:hover {
+      border-top-width: 4px;
+      border-left-width: 4px;
+      
+    }
+  
+    .toTop{
+      position: fixed;
+      right: 1%;
+      top: 90%;  
+    }
+  
+    

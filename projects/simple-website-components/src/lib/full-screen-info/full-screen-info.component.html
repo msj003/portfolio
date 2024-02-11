@@ -1,0 +1,23 @@
+<div class="fullScreenInfo_container" *ngFor="let page of pageInfo.pages"  id={{page.pageId}}>
+    <div *ngIf="page.pageType===pageTypes.TextArticlePage"   class="fullScreenInfo"  [ngStyle]="getBgColor(page.bgColor)" >
+        <div *ngIf="page.previousPage" class="arrowUp"  (click)="scrollToPreviousPage(page)"></div>
+        <lib-text-article-page class="pages" 
+        [page] = "page">
+        </lib-text-article-page>
+        <div *ngIf="page.nextPage" class="arrowDown"  (click)="scrollToNextPage(page)"></div>
+    </div>
+
+    <div *ngIf="page.pageType===pageTypes.ImageSildeShowPage" class="fullScreenInfo"  [ngStyle]="getBgColor(page.bgColor)" >
+        <div *ngIf="page.previousPage" class="arrowUp"  (click)="scrollToPreviousPage(page)"></div>
+        <lib-image-slide-show-page class="pages" 
+        [page] = "page"   >
+        </lib-image-slide-show-page>
+        <div *ngIf="page.nextPage" class="arrowDown"  (click)="scrollToNextPage(page)"></div>
+    </div>
+
+    
+</div>
+
+<div scrollTopButton class="toTop">
+    <button (click)="scrollToTop() "  > Top </button>
+</div>

@@ -1,0 +1,25 @@
+<div>
+    <h1>{{page.pageTitle}}</h1> 
+</div>
+
+<div class="carousel_container card-wrapper" >
+  <input type="radio" name="position" *ngFor="let image of page.imagesData" title="{{image.imageIndex}}"/>
+  <main id="carousel" >
+    <div class="item " *ngFor="let image of page.imagesData">
+      <div class="img-container">
+        <div class="img-inner">
+          <div class="inner-skew">
+            <img src="{{image.imageLink}}" alt="{{image.imageTitle}}">
+          </div>
+        </div>
+      </div>
+
+      <div class="text-container">
+        <h3><a href={{image.hrefTo}}>{{image.imageTitle}}</a></h3>
+        <div>
+          {{image.imageDesc}}
+        </div>  
+      </div>
+    </div>
+  </main>
+</div>
