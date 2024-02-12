@@ -8,7 +8,7 @@
     "inlineSources": true,
     "noImplicitReturns": false,
     "strictPropertyInitialization": false,
-    "types": [],
+    "types": ["@webgpu/types"]
   },
   "angularCompilerOptions": {
     "skipTemplateCodegen": true,

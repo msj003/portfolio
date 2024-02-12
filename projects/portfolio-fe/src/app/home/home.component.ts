@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FullScreenInfoComponent } from 'simple-website-components';
+import { FullScreenInfoComponent, WebgpuDemoComponent } from 'simple-website-components';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FullScreenInfoComponent],
+  imports: [FullScreenInfoComponent,WebgpuDemoComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
